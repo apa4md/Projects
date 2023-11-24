@@ -6,7 +6,7 @@
 ## Заполнение данными
 Датасет был взят из репозитория <https://github.com/ozlerhakan/mongodb-json-files/blob/master/datasets/companies.json>
 
-![alt](https://imgur.com/gdxSF1y)
+[Imgur](https://imgur.com/gdxSF1y)
 
 ## Выборка и обновление данных
 ```
