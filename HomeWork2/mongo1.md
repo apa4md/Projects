@@ -1,7 +1,7 @@
 # Установка монго на вм.
 Вм была установлена пакетным менеджером
 
-![alt](https://imgur.com/cZrhpkL)
+[Imgur](https://imgur.com/cZrhpkL)
 
 ## Заполнение данными
 Датасет был взят из репозитория <https://github.com/ozlerhakan/mongodb-json-files/blob/master/datasets/companies.json>
