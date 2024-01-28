@@ -10,3 +10,4 @@ cd myapp
 cartridge build
 cartridge start
 затем переходим http://localhost:8081
+![2024-01-28_20-42-09](https://github.com/apa4md/Projects/assets/100156015/57b04052-ae7f-4b0e-9546-0c3a8b3ff7a3)
