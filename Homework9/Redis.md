@@ -1,5 +1,7 @@
 # Redis
-## Вставка данных производилась через модуль redis pythonimport json
+## Вставка данных производилась через модуль redis python
+```
+import json
 import redis
 r = redis.StrictRedis(host='localhost', port=6379, db=1)
 with open('large-file.json') as data_file:
@@ -25,6 +27,7 @@ for i in test_data:
 for i in test_data:
     d=str(i)
     r.set(i['id'],d)
+```
 
 ##### время вставки и скорость чтения
 ###### zset
