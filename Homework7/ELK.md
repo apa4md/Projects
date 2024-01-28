@@ -31,4 +31,6 @@ GET /test/_search
 }
 
 Поиск нам вернул все записи.
+![2024-01-28_21-49-07](https://github.com/apa4md/Projects/assets/100156015/45daf606-d0a4-4667-a396-44dc7e96a3fe)
+
 
