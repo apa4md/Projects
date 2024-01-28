@@ -12,6 +12,7 @@ copy test.organizations (  ind, org_id, name, website, country, description, fou
 copy test.customers (  ind, customer_id, first_name, last_name, company, city, phone_1, phone_2, email,subscription, date, website) from 'customers-100.csv';
 
 ## Запросы с where
+![cassandra](https://github.com/apa4md/Projects/assets/100156015/9a97369b-f97e-41ae-966d-2b0c06708915)
 
 
 ## Вторичный индекс
