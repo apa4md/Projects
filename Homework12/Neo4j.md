@@ -1,7 +1,7 @@
 # Neo4j
 ## Созданние БД
 
-***
+```
 CREATE (Tez:TravelAgent {name:'TezTour'})
 CREATE (Pegas:TravelAgent {name:'Pegas'})
 CREATE (Coral:TravelAgent {name:'TezTour'})
@@ -69,18 +69,19 @@ CREATE
 (Mexico)-[:route{type:['plain']}]->(KaboSanLukas),
 (Paris)-[:route{type:['train']}]->(Rome),
 (Paris)-[:route{type:['train']}]->(London)
-***
+```
 
 ### Запрос
 
-***
+```
 MATCH ()-[r:route]->(l:Location)
 where 'train' in r.type or 'auto' in r.type
 return l
-***
+```
 
 ### Индекс
+```
 CREATE INDEX rel_index FOR ()-[r:route]-() ON (r.type)
-
+```
 ### Итог
 Создание индекса не повлияло на план запроса, скорее всего я не до конца понял схему реализации, но научился пользоваться neo4j.
