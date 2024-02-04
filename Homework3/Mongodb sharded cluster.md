@@ -1,22 +1,9 @@
 # Mongodb sharded cluster
 ##Запущен в докере шардированный кластер:
-***
-CONTAINER ID   IMAGE             COMMAND                  CREATED       STATUS              PORTS                      NAMES
-dd42364bc201   jin-mongo:6.0.2   "docker-entrypoint.s…"   9 hours ago   Up About a minute   0.0.0.0:27119->27017/tcp   mongo-config-01
-6b97dcf51e32   jin-mongo:6.0.2   "docker-entrypoint.s…"   9 hours ago   Up About a minute   0.0.0.0:27125->27017/tcp   shard-02-node-a
-6d6f8a0ffd19   jin-mongo:6.0.2   "docker-entrypoint.s…"   9 hours ago   Up About a minute   0.0.0.0:27128->27017/tcp   shard-03-node-a
-2ed94b111c9c   jin-mongo:6.0.2   "docker-entrypoint.s…"   9 hours ago   Up About a minute   0.0.0.0:27122->27017/tcp   shard-01-node-a
-5b03ed45dfc1   jin-mongo:6.0.2   "docker-entrypoint.s…"   9 hours ago   Up About a minute   0.0.0.0:27118->27017/tcp   router-02
-fd869f50527a   jin-mongo:6.0.2   "docker-entrypoint.s…"   9 hours ago   Up About a minute   0.0.0.0:27127->27017/tcp   shard-02-node-c
-99dbb146927a   jin-mongo:6.0.2   "docker-entrypoint.s…"   9 hours ago   Up About a minute   0.0.0.0:27130->27017/tcp   shard-03-node-c
-eb21ec17f8ef   jin-mongo:6.0.2   "docker-entrypoint.s…"   9 hours ago   Up About a minute   0.0.0.0:27121->27017/tcp   mongo-config-03
-63db8d0242a0   jin-mongo:6.0.2   "docker-entrypoint.s…"   9 hours ago   Up About a minute   0.0.0.0:27123->27017/tcp   shard-01-node-b
-0d6f1f7f1626   jin-mongo:6.0.2   "docker-entrypoint.s…"   9 hours ago   Up About a minute   0.0.0.0:27129->27017/tcp   shard-03-node-b
-145346cb440b   jin-mongo:6.0.2   "docker-entrypoint.s…"   9 hours ago   Up About a minute   0.0.0.0:27126->27017/tcp   shard-02-node-b
-92a49a19ac6f   jin-mongo:6.0.2   "docker-entrypoint.s…"   9 hours ago   Up About a minute   0.0.0.0:27117->27017/tcp   router-01
-78de49ecdab3   jin-mongo:6.0.2   "docker-entrypoint.s…"   9 hours ago   Up About a minute   0.0.0.0:27120->27017/tcp   mongo-config-02
-b6a569de7a59   jin-mongo:6.0.2   "docker-entrypoint.s…"   9 hours ago   Up About a minute   0.0.0.0:27124->27017/tcp   shard-01-node-c
-***
+![2024-02-05_00-11-12](https://github.com/apa4md/Projects/assets/100156015/6eab056e-b3f2-4ba5-8980-5180bbade65a)
+
+
+
 ##Добавлен тестовый датасет 
 <https://github.com/neelabalan/mongodb-sample-dataset/blob/main/sample_airbnb/listingsAndReviews.json>
 
