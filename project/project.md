@@ -5,13 +5,21 @@
 ### Структура таблицы
 
 ride_id идентификатор поездки
+
 rideable_type тип велосипеда
+
 started_at начало поездки
+
 ended_at конец поездки
+
 start_station_name start_station_id  название и идентификатор станции начала поездки
+
 end_station_name end_station_id название и идентификатор станции окончания поездки
+
 start_lat start_lng коородинаты начала поездки
+
 end_lat end_lng координаты окончания поездки
+
 member_casual зарегистрированный пользователь или нет
 
 
@@ -32,23 +40,13 @@ copy capitalbike(ride_id,rideable_type,started_at,ended_at,start_station_name,st
 Время выполнения: 214s
 
 ### Запросы
-```
-Mongodb	Cassandra	Количество строк
-db.capitalbike.find({ "ride_id": '0000544DBE5B7859' })
-время выполнения:0ms	select * from capitalbike where ride_id='0000544DBE5B7859' allow filtering;
-время выполнения:1ms	1
-db.capitalbike.count({ "start_station_id": {$gt:32300} });
-время выполнения:5290ms	select count(*) from capitalbike where start_station_id>32300 allow filtering;
-время выполнения:38700ms	1
-db.capitalbike.find({ "start_station_id": 31300 })
-время выполнения:5138ms	select * from capitalbike where start_station_id=31300 allow filtering;
-время выполнения:36600ms	11913
-db.capitalbike.find({ "started_at": {$gt: new ISODate("2024-01-01T00:00:00Z")}})
-время выполнения:7883ms	select * from capitalbike where started_at>'2024-01-01 00:00:00' allow filtering;
-время выполнения:57300ms	238834
-db.capitalbike.find({ "started_at": {$gt: new ISODate("2022-10-01T00:00:00Z"), $lt: new ISODate("2023-01-01T00:00:00Z") }})
-время выполнения:5712ms	select * from capitalbike where started_at>'2022-10-01 00:00:00' and started_at<'2023-01-01 00:00:00' allow filtering;
-время выполнения:146200ms	768259
+
+|Mongodb|	Cassandra	|Количество строк|
+|db.capitalbike.find({ "ride_id": '0000544DBE5B7859' }) ***время выполнения:0ms***	|select * from capitalbike where ride_id='0000544DBE5B7859' allow filtering; **время выполнения:1ms**|	1 |
+|db.capitalbike.count({ "start_station_id": {$gt:32300} }); **время выполнения:5290ms**	|select count(*) from capitalbike where start_station_id>32300 allow filtering; **время выполнения:38700ms** |1 |
+|db.capitalbike.find({ "start_station_id": 31300 }) **время выполнения:5138ms**	| select * from capitalbike where start_station_id=31300 allow filtering; **время выполнения:36600ms** |11913|
+|db.capitalbike.find({ "started_at": {$gt: new ISODate("2024-01-01T00:00:00Z")}}) **время выполнения:7883ms**	|select * from capitalbike where started_at>'2024-01-01 00:00:00' allow filtering; **время выполнения:57300ms**	|238834|
+|db.capitalbike.find({ "started_at": {$gt: new ISODate("2022-10-01T00:00:00Z"), $lt: new ISODate("2023-01-01T00:00:00Z") }}) **время выполнения:5712ms**	|select * from capitalbike where started_at>'2022-10-01 00:00:00' and started_at<'2023-01-01 00:00:00' allow filtering; **время выполнения:146200ms** |	768259|
 db.capitalbike.aggregate([{ $group: { _id: "$start_station_id", count: { $count: {} } } }]);
 время выполнения:4477ms	select start_station_id,start_station_name,count(*) from capitalbike group by start_station_id,start_station_name allow filtering;
 время выполнения:127700ms	777
